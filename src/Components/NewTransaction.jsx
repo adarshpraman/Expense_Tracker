@@ -82,7 +82,7 @@ const NewTransaction = ({ setTransactions }) => {
       text: text,
       amount:
         transactionType === "expense" ? -Math.abs(amount) : +Math.abs(amount),
-      date: selectedDate.format("DD/MM/YYYY"),
+      date: new Date().toLocaleString(),
     };
     setTransactions((prevState) => [transaction, ...prevState]);
     setText("");
